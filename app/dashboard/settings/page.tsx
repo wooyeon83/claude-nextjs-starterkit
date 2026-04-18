@@ -11,32 +11,12 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
+import { NotificationSettings } from "@/components/dashboard/notification-settings";
 
 export const metadata: Metadata = {
   title: "설정",
   description: "계정과 알림 환경을 관리하세요.",
 };
-
-const notifications = [
-  {
-    id: "notif-email",
-    title: "이메일 알림",
-    description: "중요한 활동을 이메일로 받아봅니다.",
-    defaultChecked: true,
-  },
-  {
-    id: "notif-marketing",
-    title: "마케팅 소식",
-    description: "신기능 및 이벤트 정보를 받아봅니다.",
-    defaultChecked: false,
-  },
-  {
-    id: "notif-security",
-    title: "보안 경고",
-    description: "로그인 및 권한 변경 시 즉시 알림을 보냅니다.",
-    defaultChecked: true,
-  },
-];
 
 export default function SettingsPage() {
   return (
@@ -92,32 +72,7 @@ export default function SettingsPage() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="flex flex-col gap-4">
-            {notifications.map((n, i) => (
-              <div key={n.id}>
-                <label
-                  htmlFor={n.id}
-                  className="flex cursor-pointer items-start gap-3"
-                >
-                  <input
-                    id={n.id}
-                    type="checkbox"
-                    defaultChecked={n.defaultChecked}
-                    className="mt-1 size-4 rounded border-border text-primary focus:ring-2 focus:ring-ring/40"
-                  />
-                  <div className="flex flex-col">
-                    <span className="text-sm font-medium">{n.title}</span>
-                    <span className="text-sm text-muted-foreground">
-                      {n.description}
-                    </span>
-                  </div>
-                </label>
-                {i < notifications.length - 1 && (
-                  <Separator className="mt-4" />
-                )}
-              </div>
-            ))}
-          </div>
+          <NotificationSettings />
         </CardContent>
       </Card>
 
