@@ -33,15 +33,17 @@ Next.js 16 App Router · React 19 · Tailwind CSS v4 · shadcn/ui 기반의 모�
 
 `components/ui/` 에 다음 7개 프리미티브가 미리 설정되어 있습니다.
 
-| 컴포넌트 | 용도 |
-| --- | --- |
-| `avatar` | 사용자 프로필 이미지 · 이니셜 |
-| `badge` | 상태/라벨 표시 (default / secondary / outline / destructive) |
-| `button` | 6 variant × 7 size 조합 |
-| `card` | `CardHeader / CardTitle / CardDescription / CardContent / CardFooter` |
-| `input` | 텍스트 입력 |
-| `label` | 폼 라벨 (Radix `Label`) |
-| `separator` | 가로/세로 구분선 (Radix `Separator`) |
+
+| 컴포넌트        | 용도                                                                    |
+| ----------- | --------------------------------------------------------------------- |
+| `avatar`    | 사용자 프로필 이미지 · 이니셜                                                     |
+| `badge`     | 상태/라벨 표시 (default / secondary / outline / destructive)                |
+| `button`    | 6 variant × 7 size 조합                                                 |
+| `card`      | `CardHeader / CardTitle / CardDescription / CardContent / CardFooter` |
+| `input`     | 텍스트 입력                                                                |
+| `label`     | 폼 라벨 (Radix `Label`)                                                  |
+| `separator` | 가로/세로 구분선 (Radix `Separator`)                                         |
+
 
 신규 컴포넌트가 필요하면 `npx shadcn@latest add <name>` 으로 동일 스타일로 추가할 수 있습니다.
 
@@ -54,13 +56,15 @@ Next.js 16 App Router · React 19 · Tailwind CSS v4 · shadcn/ui 기반의 모�
 
 ### 5. 대시보드 예제 (5 페이지)
 
-| 경로 | 내용 |
-| --- | --- |
-| `/dashboard` | 개요 — 통계 4카드 + 최근 활동 + 빠른 작업 |
-| `/dashboard/analytics` | 분석 — 지표 카드 + 트래픽 소스 + 디바이스 비율 |
-| `/dashboard/projects` | 프로젝트 — 상태 Badge + 진행률 바 카드 그리드 |
-| `/dashboard/team` | 팀 — 요약 카드 + 멤버 목록 (Avatar / 역할 Badge) |
-| `/dashboard/settings` | 설정 — 프로필 / 알림 / 계정 폼 |
+
+| 경로                     | 내용                                    |
+| ---------------------- | ------------------------------------- |
+| `/dashboard`           | 개요 — 통계 4카드 + 최근 활동 + 빠른 작업           |
+| `/dashboard/analytics` | 분석 — 지표 카드 + 트래픽 소스 + 디바이스 비율         |
+| `/dashboard/projects`  | 프로젝트 — 상태 Badge + 진행률 바 카드 그리드        |
+| `/dashboard/team`      | 팀 — 요약 카드 + 멤버 목록 (Avatar / 역할 Badge) |
+| `/dashboard/settings`  | 설정 — 프로필 / 알림 / 계정 폼                  |
+
 
 ### 6. 기타
 
@@ -126,10 +130,7 @@ lib/
 
 ## 주의 사항
 
-이 프로젝트는 **Next.js 16** 을 사용합니다. App Router · 서버 컴포넌트 · async `params` 등
-이전 버전과 달라진 부분이 있으므로, 새 코드를 작성하기 전
-`node_modules/next/dist/docs/` 의 관련 가이드 또는 [공식 문서](https://nextjs.org/docs) 를 참고하세요.
+이 프로젝트는 **Next.js 16** 을 사용합니다. App Router · 서버 컴포넌트 · async `params` 등  
+이전 버전과 달라진 부분이 있으므로, 새 코드를 작성하기 전  
+`node_modules/next/dist/docs/` 의 관련 가이드 또는 [공식 문서](https://nextjs.org/docs) 를 참고하세요. 
 
-## 라이선스
-
-Private / 사내 사용.
