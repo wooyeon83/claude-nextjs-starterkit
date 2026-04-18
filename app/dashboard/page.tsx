@@ -15,6 +15,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
@@ -123,12 +124,12 @@ export default function DashboardPage() {
               <CardContent>
                 <div className="text-2xl font-semibold">{s.value}</div>
                 <div
-                  className={
-                    "mt-1 flex items-center gap-1 text-xs " +
-                    (s.up
+                  className={cn(
+                    "mt-1 flex items-center gap-1 text-xs",
+                    s.up
                       ? "text-emerald-600 dark:text-emerald-500"
-                      : "text-red-600 dark:text-red-500")
-                  }
+                      : "text-red-600 dark:text-red-500",
+                  )}
                 >
                   {s.up ? (
                     <ArrowUpRight className="size-3" />

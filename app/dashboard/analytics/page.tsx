@@ -19,6 +19,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "분석",
@@ -97,12 +98,12 @@ export default function AnalyticsPage() {
               <CardContent>
                 <div className="text-2xl font-semibold">{s.value}</div>
                 <div
-                  className={
-                    "mt-1 flex items-center gap-1 text-xs " +
-                    (s.up
+                  className={cn(
+                    "mt-1 flex items-center gap-1 text-xs",
+                    s.up
                       ? "text-emerald-600 dark:text-emerald-500"
-                      : "text-red-600 dark:text-red-500")
-                  }
+                      : "text-red-600 dark:text-red-500",
+                  )}
                 >
                   {s.up ? (
                     <ArrowUpRight className="size-3" />
